@@ -1,0 +1,114 @@
+*{
+  margin: 0;
+  padding: 0;
+  display: flexbox;
+}
+
+body{
+  height: 100vh;
+  font-family: Roboto;
+  font-size: larger;
+  background: linear-gradient(rgb(32, 30, 30),rgb(88, 84, 84));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+main{
+  margin-bottom: 20px;
+}
+main h1{
+  color: aliceblue;
+}
+
+/*Inputs*/
+.input{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 15px;
+}
+.input input {
+  background: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 8px;
+}
+.input input::placeholder{
+  color: rgb(32, 30, 30);
+}
+.input button {
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+  padding: 4px;
+  color: aliceblue;
+  background: transparent;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+
+.input button:hover {
+  transform: scale(1.3);
+}
+
+/*Content*/
+.content{
+  background-color: aliceblue;
+  border-radius: 8px;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 10px 10px 20px #000000;
+
+  /*animation-name: slideCard;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-iteration-count: normal;
+  animation-fill-mode: none;*/
+  animation: slideCard 0.8s ease 0s normal none;
+}
+.content h2{
+  margin-bottom: 10px;
+}
+.content span {
+  letter-spacing: 1px;
+  margin: 5px;
+}
+
+@keyframes slideCard{
+  0% {
+    transform: translateX(400px);
+  }
+  50%{
+    transform: translateX(-80px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+
+@media(max-width:600px){
+  body{
+    font-size: medium;
+  }
+
+  .content{
+    transition: 0.8s;
+    width: 70%;
+  }
+}
